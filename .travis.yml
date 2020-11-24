@@ -13,8 +13,10 @@ after_success:
   - docker build -t khemgabz/multi-service-nginx ./nginx
   - docker build -t khemgabz/multi-service-server ./server
   - docker build -t khemgabz/multi-service-worker ./worker
+
   # login to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+
   # take images and push to docker hub
   - docker push khemgabz/multi-service-client
   - docker push khemgabz/multi-service-nginx
