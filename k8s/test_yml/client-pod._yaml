@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
     - name: client
-      image: khemgabz/multi-service-client
+      image: khemgabz/multi-service-worker
       ports:
-        - containerPort: 3000
+        - containerPort: 9999
