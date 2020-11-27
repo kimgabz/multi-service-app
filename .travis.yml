@@ -22,16 +22,16 @@ after_success:
   - docker push khemgabz/multi-service-nginx
   - docker push khemgabz/multi-service-server
   - docker push khemgabz/multi-service-worker
-
-deploy:
-  provider: elasticbeanstalk
-  region: south-east-asia1
-  app: multi-service
-  env: Multidocker-env
-  bucket_name: elasticbeanstalk-south-east-asia-s3_id
-  bucket_path: docker-multi
-  on:
-    branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: $AWS_SECRET_KEY
+# set-up AWS
+# deploy:
+#   provider: elasticbeanstalk
+#   region: south-east-asia1
+#   app: multi-service
+#   env: Multidocker-env
+#   bucket_name: elasticbeanstalk-south-east-asia-s3_id
+#   bucket_path: docker-multi
+#   on:
+#     branch: master
+#   access_key_id: $AWS_ACCESS_KEY
+#   secret_access_key:
+#     secure: $AWS_SECRET_KEY
